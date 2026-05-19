@@ -6,7 +6,7 @@ from prompts import SYSTEM_PROMPT_PREDICT
 class FearForecast:
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.model = "gpt-4o"
+        self.model = "gpt-4o-mini"
 
     def _call_ai(self, user_message: str) -> str:
         response = self.client.chat.completions.create(

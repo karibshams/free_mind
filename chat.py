@@ -6,7 +6,7 @@ from prompts import SYSTEM_PROMPT_CHAT
 class AICoach:
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.model = "gpt-4o"
+        self.model = "gpt-4o-mini"
         self.history = [{"role": "system", "content": SYSTEM_PROMPT_CHAT}]
 
     def chat(self, user_message: str) -> str:
